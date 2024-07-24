@@ -1,28 +1,35 @@
 {
   "name": "latamcomponents",
-  "version": "0.0.1",
+  "version": "0.0.26",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/latamcomponents/latamcomponents.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/latamcomponents/latamcomponents.esm.js",
-      "require": "./dist/latamcomponents/latamcomponents.cjs.js"
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
     },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./latam-button": {
+      "import": "./dist/components/latam-button.js",
+      "types": "./dist/components/latam-button.d.ts"
     },
-    "./loader": {
-      "import": "./loader/index.js",
-      "require": "./loader/index.cjs",
-      "types": "./loader/index.d.ts"
+    "./latam-faq": {
+      "import": "./dist/components/latam-faq.js",
+      "types": "./dist/components/latam-faq.d.ts"
+    },
+    "./latam-service": {
+      "import": "./dist/components/latam-service.js",
+      "types": "./dist/components/latam-service.d.ts"
+    },
+    "./latam-testimonial": {
+      "import": "./dist/components/latam-testimonial.js",
+      "types": "./dist/components/latam-testimonial.d.ts"
     }
   },
+  "types": "dist/components/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Coding-Latam/latam-components.git"
@@ -36,9 +43,7 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
-  },
-  "devDependencies": {
+    "generate": "stencil generate",
     "@stencil/core": "^4.7.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
@@ -46,7 +51,29 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0",
     "stencil-tailwind-plugin": "^1.8.0",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "nuke": "rimraf node_modules rimraf package-lock.json"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.2",
+    "@storybook/addon-interactions": "^8.2.2",
+    "@storybook/addon-links": "^8.2.2",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
+    "@storybook/blocks": "^8.2.2",
+    "@storybook/html": "^8.2.2",
+    "@storybook/html-webpack5": "^8.2.2",
+    "@storybook/test": "^8.2.2",
+    "@storybook/web-components": "^8.2.2",
+    "@storybook/web-components-vite": "^8.2.2",
+    "lit": "^3.1.4",
+    "storybook": "^8.2.2",
+    "storybook-addon-stencil": "^0.2.1"
+  },
+  "dependencies": {
+    "stencil-tailwind-plugin": "^1.8.0"
+  }
 }

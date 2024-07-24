@@ -7,23 +7,24 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LatamButton {
-        "content": string;
         "customStyles"?: string;
         "href": string;
+        "label": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface LatamFaq {
+        "answer": string;
+        "question": string;
+    }
+    interface LatamService {
+        "description": string;
+        "image": string;
+        "name": string;
+    }
+    interface LatamTestimonials {
+        "area": string;
+        "author": string;
+        "image": string;
+        "testimonial": string;
     }
 }
 declare global {
@@ -33,40 +34,57 @@ declare global {
         prototype: HTMLLatamButtonElement;
         new (): HTMLLatamButtonElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLLatamFaqElement extends Components.LatamFaq, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLLatamFaqElement: {
+        prototype: HTMLLatamFaqElement;
+        new (): HTMLLatamFaqElement;
+    };
+    interface HTMLLatamServiceElement extends Components.LatamService, HTMLStencilElement {
+    }
+    var HTMLLatamServiceElement: {
+        prototype: HTMLLatamServiceElement;
+        new (): HTMLLatamServiceElement;
+    };
+    interface HTMLLatamTestimonialsElement extends Components.LatamTestimonials, HTMLStencilElement {
+    }
+    var HTMLLatamTestimonialsElement: {
+        prototype: HTMLLatamTestimonialsElement;
+        new (): HTMLLatamTestimonialsElement;
     };
     interface HTMLElementTagNameMap {
         "latam-button": HTMLLatamButtonElement;
-        "my-component": HTMLMyComponentElement;
+        "latam-faq": HTMLLatamFaqElement;
+        "latam-service": HTMLLatamServiceElement;
+        "latam-testimonials": HTMLLatamTestimonialsElement;
     }
 }
 declare namespace LocalJSX {
     interface LatamButton {
-        "content"?: string;
         "customStyles"?: string;
         "href"?: string;
+        "label"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface LatamFaq {
+        "answer"?: string;
+        "question"?: string;
+    }
+    interface LatamService {
+        "description"?: string;
+        "image"?: string;
+        "name"?: string;
+    }
+    interface LatamTestimonials {
+        "area"?: string;
+        "author"?: string;
+        "image"?: string;
+        "testimonial"?: string;
     }
     interface IntrinsicElements {
         "latam-button": LatamButton;
-        "my-component": MyComponent;
+        "latam-faq": LatamFaq;
+        "latam-service": LatamService;
+        "latam-testimonials": LatamTestimonials;
     }
 }
 export { LocalJSX as JSX };
@@ -74,7 +92,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "latam-button": LocalJSX.LatamButton & JSXBase.HTMLAttributes<HTMLLatamButtonElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "latam-faq": LocalJSX.LatamFaq & JSXBase.HTMLAttributes<HTMLLatamFaqElement>;
+            "latam-service": LocalJSX.LatamService & JSXBase.HTMLAttributes<HTMLLatamServiceElement>;
+            "latam-testimonials": LocalJSX.LatamTestimonials & JSXBase.HTMLAttributes<HTMLLatamTestimonialsElement>;
         }
     }
 }

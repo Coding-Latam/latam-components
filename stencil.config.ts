@@ -7,6 +7,7 @@ setPluginConfigurationDefaults({
 });
 
 export const config: Config = {
+  globalStyle: 'src/styles/tailwind.css',
   namespace: 'latamcomponents',
   outputTargets: [
     {
@@ -15,17 +16,17 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      customElementsExportBehavior: 'auto-define-custom-elements',
+      customElementsExportBehavior: 'bundle',
       externalRuntime: false,
       generateTypeDeclarations: true,
     },
-    {
-      type: 'docs-readme',
-    },
-    {
-      type: 'www',
-      serviceWorker: null, // disable service workers
-    },
+    // {
+    //   type: 'docs-readme',
+    // },
+    // {
+    //   type: 'www',
+    //   serviceWorker: null, // disable service workers
+    // },
   ],
   testing: {
     browserHeadless: 'new',
