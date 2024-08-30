@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'latam-button',
-  shadow: true,
+  shadow: false,
 })
 export class LatamButton {
   @Prop() href: string;

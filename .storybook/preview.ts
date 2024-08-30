@@ -2,8 +2,7 @@
 import { defineCustomElements } from '../dist/esm/loader';
 
 defineCustomElements();
-import '../src/styles/tailwind.css';
-// import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+import '../src/global/tailwind-output.css';
 
 const preview = {
   tags: ['autodocs'],

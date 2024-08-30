@@ -20,7 +20,7 @@ export namespace Components {
         "image": string;
         "name": string;
     }
-    interface LatamTestimonials {
+    interface LatamTestimonial {
         "area": string;
         "author": string;
         "image": string;
@@ -46,17 +46,17 @@ declare global {
         prototype: HTMLLatamServiceElement;
         new (): HTMLLatamServiceElement;
     };
-    interface HTMLLatamTestimonialsElement extends Components.LatamTestimonials, HTMLStencilElement {
+    interface HTMLLatamTestimonialElement extends Components.LatamTestimonial, HTMLStencilElement {
     }
-    var HTMLLatamTestimonialsElement: {
-        prototype: HTMLLatamTestimonialsElement;
-        new (): HTMLLatamTestimonialsElement;
+    var HTMLLatamTestimonialElement: {
+        prototype: HTMLLatamTestimonialElement;
+        new (): HTMLLatamTestimonialElement;
     };
     interface HTMLElementTagNameMap {
         "latam-button": HTMLLatamButtonElement;
         "latam-faq": HTMLLatamFaqElement;
         "latam-service": HTMLLatamServiceElement;
-        "latam-testimonials": HTMLLatamTestimonialsElement;
+        "latam-testimonial": HTMLLatamTestimonialElement;
     }
 }
 declare namespace LocalJSX {
@@ -74,7 +74,7 @@ declare namespace LocalJSX {
         "image"?: string;
         "name"?: string;
     }
-    interface LatamTestimonials {
+    interface LatamTestimonial {
         "area"?: string;
         "author"?: string;
         "image"?: string;
@@ -84,7 +84,7 @@ declare namespace LocalJSX {
         "latam-button": LatamButton;
         "latam-faq": LatamFaq;
         "latam-service": LatamService;
-        "latam-testimonials": LatamTestimonials;
+        "latam-testimonial": LatamTestimonial;
     }
 }
 export { LocalJSX as JSX };
@@ -94,7 +94,7 @@ declare module "@stencil/core" {
             "latam-button": LocalJSX.LatamButton & JSXBase.HTMLAttributes<HTMLLatamButtonElement>;
             "latam-faq": LocalJSX.LatamFaq & JSXBase.HTMLAttributes<HTMLLatamFaqElement>;
             "latam-service": LocalJSX.LatamService & JSXBase.HTMLAttributes<HTMLLatamServiceElement>;
-            "latam-testimonials": LocalJSX.LatamTestimonials & JSXBase.HTMLAttributes<HTMLLatamTestimonialsElement>;
+            "latam-testimonial": LocalJSX.LatamTestimonial & JSXBase.HTMLAttributes<HTMLLatamTestimonialElement>;
         }
     }
 }

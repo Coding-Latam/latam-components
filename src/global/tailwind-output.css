@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -554,8 +554,37 @@ video {
   --tw-contain-style:  ;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
 
 .h-fit {
@@ -563,9 +592,41 @@ video {
   height: fit-content;
 }
 
+.min-h-\[230px\] {
+  min-height: 230px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.max-w-\[316px\] {
+  max-width: 316px;
+}
+
+.max-w-\[70px\] {
+  max-width: 70px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.gap-7 {
+  gap: 1.75rem;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-3xl {
@@ -577,8 +638,39 @@ video {
   background-color: rgb(94 185 240 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-primary-color {
+  --tw-text-opacity: 1;
+  color: rgb(94 185 240 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -600,4 +692,12 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.marker\:text-primary-color *::marker {
+  color: rgb(94 185 240 );
+}
+
+.marker\:text-primary-color::marker {
+  color: rgb(94 185 240 );
 }

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,ts,jsx,tsx}', './.storybook/**/*.{js,jsx,ts,tsx,html}', './src/components/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./src/**/*.{ts,tsx,html}'],
   safelist: ['justify-self-center'],
   theme: {
     extend: {

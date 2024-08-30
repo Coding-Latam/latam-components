@@ -1,8 +1,8 @@
 import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'latam-testimonials',
-  shadow: true,
+  tag: 'latam-testimonial',
+  shadow: false,
 })
 export class LatamTestimonial {
   @Prop() testimonial: string;

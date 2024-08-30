@@ -2,7 +2,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'latam-faq',
-  shadow: true,
+  shadow: false,
 })
 export class LatamFaq {
   @Prop() question: string;
