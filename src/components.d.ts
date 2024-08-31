@@ -15,10 +15,26 @@ export namespace Components {
         "answer": string;
         "question": string;
     }
+    interface LatamProject {
+        "category": string;
+        "image": string;
+        "name": string;
+    }
     interface LatamService {
         "description": string;
         "image": string;
         "name": string;
+    }
+    interface LatamStrategyCard {
+        "description": string;
+        "name": string;
+        "order": number;
+    }
+    interface LatamTeam {
+        "area": string;
+        "image": string;
+        "name": string;
+        "slogan": string;
     }
     interface LatamTestimonial {
         "area": string;
@@ -40,11 +56,29 @@ declare global {
         prototype: HTMLLatamFaqElement;
         new (): HTMLLatamFaqElement;
     };
+    interface HTMLLatamProjectElement extends Components.LatamProject, HTMLStencilElement {
+    }
+    var HTMLLatamProjectElement: {
+        prototype: HTMLLatamProjectElement;
+        new (): HTMLLatamProjectElement;
+    };
     interface HTMLLatamServiceElement extends Components.LatamService, HTMLStencilElement {
     }
     var HTMLLatamServiceElement: {
         prototype: HTMLLatamServiceElement;
         new (): HTMLLatamServiceElement;
+    };
+    interface HTMLLatamStrategyCardElement extends Components.LatamStrategyCard, HTMLStencilElement {
+    }
+    var HTMLLatamStrategyCardElement: {
+        prototype: HTMLLatamStrategyCardElement;
+        new (): HTMLLatamStrategyCardElement;
+    };
+    interface HTMLLatamTeamElement extends Components.LatamTeam, HTMLStencilElement {
+    }
+    var HTMLLatamTeamElement: {
+        prototype: HTMLLatamTeamElement;
+        new (): HTMLLatamTeamElement;
     };
     interface HTMLLatamTestimonialElement extends Components.LatamTestimonial, HTMLStencilElement {
     }
@@ -55,7 +89,10 @@ declare global {
     interface HTMLElementTagNameMap {
         "latam-button": HTMLLatamButtonElement;
         "latam-faq": HTMLLatamFaqElement;
+        "latam-project": HTMLLatamProjectElement;
         "latam-service": HTMLLatamServiceElement;
+        "latam-strategy-card": HTMLLatamStrategyCardElement;
+        "latam-team": HTMLLatamTeamElement;
         "latam-testimonial": HTMLLatamTestimonialElement;
     }
 }
@@ -69,10 +106,26 @@ declare namespace LocalJSX {
         "answer"?: string;
         "question"?: string;
     }
+    interface LatamProject {
+        "category"?: string;
+        "image"?: string;
+        "name"?: string;
+    }
     interface LatamService {
         "description"?: string;
         "image"?: string;
         "name"?: string;
+    }
+    interface LatamStrategyCard {
+        "description"?: string;
+        "name"?: string;
+        "order"?: number;
+    }
+    interface LatamTeam {
+        "area"?: string;
+        "image"?: string;
+        "name"?: string;
+        "slogan"?: string;
     }
     interface LatamTestimonial {
         "area"?: string;
@@ -83,7 +136,10 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "latam-button": LatamButton;
         "latam-faq": LatamFaq;
+        "latam-project": LatamProject;
         "latam-service": LatamService;
+        "latam-strategy-card": LatamStrategyCard;
+        "latam-team": LatamTeam;
         "latam-testimonial": LatamTestimonial;
     }
 }
@@ -93,7 +149,10 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "latam-button": LocalJSX.LatamButton & JSXBase.HTMLAttributes<HTMLLatamButtonElement>;
             "latam-faq": LocalJSX.LatamFaq & JSXBase.HTMLAttributes<HTMLLatamFaqElement>;
+            "latam-project": LocalJSX.LatamProject & JSXBase.HTMLAttributes<HTMLLatamProjectElement>;
             "latam-service": LocalJSX.LatamService & JSXBase.HTMLAttributes<HTMLLatamServiceElement>;
+            "latam-strategy-card": LocalJSX.LatamStrategyCard & JSXBase.HTMLAttributes<HTMLLatamStrategyCardElement>;
+            "latam-team": LocalJSX.LatamTeam & JSXBase.HTMLAttributes<HTMLLatamTeamElement>;
             "latam-testimonial": LocalJSX.LatamTestimonial & JSXBase.HTMLAttributes<HTMLLatamTestimonialElement>;
         }
     }

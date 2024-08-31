@@ -1,4 +1,5 @@
-import './styles/tailwind.css';
+// import './styles/tailwind.css';
+import './global/tailwind-output.css';
 /**
  * @fileoverview entry point for your component library
  *
