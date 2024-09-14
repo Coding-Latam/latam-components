@@ -1,13 +1,7 @@
 import { Config } from '@stencil/core';
-import tailwind, { tailwindHMR, setPluginConfigurationDefaults } from 'stencil-tailwind-plugin';
-import tailwindConf from './tailwind.config';
-
-setPluginConfigurationDefaults({
-  tailwindConf,
-});
 
 export const config: Config = {
-  globalStyle: 'src/styles/tailwind.css',
+  globalStyle: 'src/global/tailwind-output.css',
   namespace: 'latamcomponents',
   outputTargets: [
     {
@@ -31,5 +25,5 @@ export const config: Config = {
   testing: {
     browserHeadless: 'new',
   },
-  plugins: [tailwind(), tailwindHMR()],
+  // plugins: [tailwind(), tailwindHMR()],
 };
