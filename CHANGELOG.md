@@ -1,5 +1,11 @@
 # latamcomponents
 
+## 0.3.0
+
+### Minor Changes
+
+- e4be379: add customStyle prop for button
+
 ## 0.2.0
 
 ### Minor Changes
