@@ -9,11 +9,9 @@ export class LatamButton {
 
   @Prop() label: string;
 
-  @Prop() customStyles?: string;
-
   render() {
     return (
-      <a class={`bg-primary-color rounded-3xl text-white block h-fit p-4 w-fit no-underline shadow-md ${this.customStyles}`} href={this.href}>
+      <a class={`bg-primary-color rounded-3xl text-white block h-fit p-4 w-fit no-underline shadow-md`} href={this.href}>
         {this.label}
       </a>
     );
