@@ -50,6 +50,9 @@
     "dist/",
     "loader/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
@@ -67,7 +70,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "nuke": "rimraf node_modules rimraf package-lock.json",
-    "release": "stencil build && changeset publish && npm run publish"
+    "release": "stencil build && changeset publish"
   },
   "license": "MIT",
   "devDependencies": {
