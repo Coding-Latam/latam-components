@@ -1,5 +1,11 @@
 # latamcomponents
 
+## 0.2.0
+
+### Minor Changes
+
+- 5cd6d5d: add custom style prop
+
 ## 0.1.1
 
 ### Patch Changes
